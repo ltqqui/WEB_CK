@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-    position: relative;
+    /* position: relative; */
     /* margin: auto; */
 }
 .welcome{
@@ -35,7 +35,7 @@ ul li::before{
     border-radius: 3px;
     background-color: #000;   
     position: absolute;
-    bottom: -8px;
+    bottom: 20px;
     left: 0;
     transform: scale(0);
 }
@@ -44,18 +44,22 @@ ul li:hover::before{
 }
 
 .header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
     display: flex;
     justify-content: space-around;
-    line-height: 50px;
-    padding: 0 50px;
+    height: 100px;
+    line-height: 100px;
+    padding:0 50px;
     z-index: 2;
     background: rgba(248, 248, 248, 0.807);
+    box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-out;
 }
+
+
 .logo{
     width: 20%;
 }
@@ -63,11 +67,8 @@ ul li:hover::before{
     display: flex;
     justify-content: space-around;
 }
-.logo a img{
-    width: 30%;
-}
 .logo a span{
-    width: 70%;
+    width: 100%;
     font-size: 40px;
     margin-left: 0;
     color: #121212BF;
@@ -82,16 +83,20 @@ nav{
 .account{
     width: 10%;
     font-size: 20px;
+    
     /* background-color: green; */
     color: #121212BF;
     border-radius: 3px;
-    height: 50px;
-    line-height: 50px;
     cursor: pointer;
 }
 .account  li {
+    margin-left: -30px;
     display: none;
     text-align: center;
+    background: rgba(248, 248, 248, 0.807);
+}
+.account  li:last-child {
+    border-radius: 0 0 4px 4px;
 }
 
 .account:hover{
@@ -99,6 +104,7 @@ nav{
     transition: all 0.5s;
 }
 .account:hover li{
+    transition: all 0.5s;
     display: block; 
        
 }
@@ -121,6 +127,7 @@ nav{
     font-size: 25px;
 }
 .menu{
+    margin-bottom: 0;
     width:80% ;
     display: flex;
     margin-left: -80px;
@@ -128,44 +135,101 @@ nav{
 }
 .menu  li {
     margin: 0 10px;
-    font-size: 17px;
     margin-bottom: 0;
-    line-height: 60px;
 }
 .menu li a{
-    font-size: 18px;
+    font-size: 20px;
 }
 
-.slide{
-    width: 100%;   
-     position: relative;
-    height: 600px;
-    z-index: 1;
-   /* margin-bottom: 50px; */
+.sticky{
+    height: 80px;
+    line-height: 70px;
+    background-color: #000;
+    /* background-color: #446084; */
+    opacity: 0.8;
 }
-.slide::before{
+.sticky .logo a span {
+    color: #fff;
+}
+.sticky li a{
+    color: #fff;
+}
+
+.sticky .search i{
+    color: #fff;
+}
+.sticky .cart i{
+    color: #fff;
+}
+.sticky .account{
+    color: #fff;
+}
+
+.sticky .account  li {
+    background: #000;
+    opacity: 0.8;
+    /* transition: all 0.5s; */
+    
+}
+
+.sticky ul li::before{
     content: "";
     width: 100%;
-    height: 100%;
-    z-index: 1;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #c5bcbc;   
     position: absolute;
-    top: 0;
+    bottom: 20px;
     left: 0;
-  
-
-}
-.slide .carousel-item{
-    margin-top: 0;
-   width: 100% ;
-   height: 800px    ;
+    transform: scale(0);
 }
 
-.slide .carousel-item  img{
-    margin-top: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
+
+.slider {
+    padding-bottom: 80px;
+    padding-top: 150px;
+    background-image: url("./img/products/image\ 6.png");
+    background-size: cover;
+    background-position: center;
 }
+.slider .carousel-item .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.slider .carousel-item .row .col-l {
+    margin-left: 150px;
+}
+.slider .carousel-item .row .col-r {
+    text-align: center;
+    margin-top: 150px;
+}
+.slider .carousel-item .row .col-r .item h3 {
+    font-family: "Inter";
+    font-style: normal;
+    line-height: 48px;
+    color: #8d8787;
+    font-size: 40px;
+}
+.slider .carousel-item .row .col-r .item p {
+    font-family: "Inter";
+    font-style: normal;
+    line-height: 24px;
+    font-size: 20px;
+}
+.slider .carousel-item .row .col-r .item button {
+    background-color: #f8b653;
+    border: none;
+    width: 150px;
+    height: 50px;
+    font-family: "Inter";
+    font-style: normal;
+    line-height: 24px;
+    margin-top: 30px;
+}
+.slider .carousel-item .row .col-l .item img {
+    width: 600px;
+}
+
 
 .new-product{
     padding: 0 80px;
@@ -344,6 +408,68 @@ nav{
     opacity: 0.85;
     transition: 0.25s ease-in-out;
 }
+footer{
+    background-color: #446084;
+    color: #fff;
+}
+
+footer .row{   
+    margin-top: 50px; 
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 0 ;
+}
+
+footer .row .col-4{
+    padding: 0 100px;
+    /* margin: 0 20px; */
+}
+footer .row .col-4 a{
+    display: block;
+    margin: 20px 0;
+    color: #fff;
+}
+footer .row .col-4 h4{
+    font-weight: 400;
+}
+footer .row .col-4 i{
+    margin-right: 10px;
+}
+footer .col2 h4{
+    text-align: center;
+}
+footer .row .col2 a{
+    margin-left: 90px;
+}
+footer .row .col-4 img{
+    width: 40%;
+}
+
+@media only screen and (max-width:46.1875rem){
+    .header {
+        /* height: 100px; */
+        line-height: normal;
+        flex-direction: column;
+    }
+    .logo {
+        width: 100%;
+    }
+    .menu{
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    .slider{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
 
 
 @keyframes animatedAccount{

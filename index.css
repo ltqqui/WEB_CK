@@ -1,0 +1,369 @@
+*{
+    margin: 0 auto ;    
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+    /* margin: auto; */
+}
+.welcome{
+    padding: 8px 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(217, 211, 211);
+    border-top: 1px solid rgb(217, 211, 211);
+    margin-bottom: 20px;
+    color: #121212;
+    font-size: 13px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul li{
+    list-style: none;
+    position: relative;
+}
+ul li:hover{
+    color: gray;
+}
+ul li::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #000;   
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transform: scale(0);
+}
+ul li:hover::before{
+    animation: animatedAccount 1s 1;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    line-height: 50px;
+    padding: 0 50px;
+    z-index: 2;
+    background: rgba(248, 248, 248, 0.807);
+}
+.logo{
+    width: 20%;
+}
+.logo a{
+    display: flex;
+    justify-content: space-around;
+}
+.logo a img{
+    width: 30%;
+}
+.logo a span{
+    width: 70%;
+    font-size: 40px;
+    margin-left: 0;
+    color: #121212BF;
+    font-weight: lighter;
+}
+nav{
+    width: 70%;
+    display: flex;    
+    justify-content: space-between;
+    
+}
+.account{
+    width: 10%;
+    font-size: 20px;
+    /* background-color: green; */
+    color: #121212BF;
+    border-radius: 3px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.account  li {
+    display: none;
+    text-align: center;
+}
+
+.account:hover{
+    /* background-color: green; */
+    transition: all 0.5s;
+}
+.account:hover li{
+    display: block; 
+       
+}
+.search-cart{
+    width:20%;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
+.search{
+    width: 50%;
+}
+.cart{
+    width: 50%;
+}
+.search i{
+    font-size: 25px;
+}
+.cart i{
+    font-size: 25px;
+}
+.menu{
+    width:80% ;
+    display: flex;
+    margin-left: -80px;
+    justify-content: space-around;
+}
+.menu  li {
+    margin: 0 10px;
+    font-size: 17px;
+    margin-bottom: 0;
+    line-height: 60px;
+}
+.menu li a{
+    font-size: 18px;
+}
+
+.slide{
+    width: 100%;   
+     position: relative;
+    height: 600px;
+    z-index: 1;
+   /* margin-bottom: 50px; */
+}
+.slide::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+
+}
+.slide .carousel-item{
+    margin-top: 0;
+   width: 100% ;
+   height: 800px    ;
+}
+
+.slide .carousel-item  img{
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.new-product{
+    padding: 0 80px;
+    margin-top: 200px;
+}
+.new-product h3{
+    font-size: 20px;
+    color: #555;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid #bebebe;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.headline{
+    margin-top: 50px ;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.row .card{
+    width: 400px;
+    border: none;
+    margin: 20px auto;
+    padding: 0;
+}
+.row .card .card-content{
+    width: 100%;
+    padding: 0 60px;
+}
+.row .card img{
+    /* max-width: 100%; */
+    width: 100%;
+    height: 100%;
+    /* width: 100%; */
+    display: block;
+}
+.row .card span{
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+.row .card p{
+    font-size: 20px;
+}
+.row .card .card-body{
+    position: relative;
+    overflow: hidden;
+    /* padding: 0; */
+    padding: 0 ;
+}
+.row .card .card-body .by-now 
+{   
+    position: absolute;
+    bottom: -48px;
+    /* left: auto; */
+    left: 0px;
+    width: 85%;
+    padding: 10px 0;
+    background-color: #446084;
+    font-size: 18px;
+    margin: 0 30px;
+    opacity: 0.85;
+}
+.row .card .card-body a{
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+.row .card .card-body:hover .by-now{
+    bottom: 0px;
+    display: block;
+    transition: 0.25s ease-in-out;
+}
+.row .card .card-body:hover img{
+    opacity: 0.85;
+    transition: 0.25s ease-in-out;
+}
+
+
+/* --------------------------------SALE */
+
+
+.sale-product h3{
+    font-size: 20px;
+    color: #555;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid #bebebe;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.sale-product{
+    padding: 0 80px;
+    margin-top: 200px;
+}
+.sale-product h3{
+    font-size: 20px;
+    color: #555;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid #bebebe;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.headline{
+    margin-top: 50px ;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.sale-product .row .card{
+    width: 400px;
+    border: none;
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+}
+.sale-product .row .card .logo-sale{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: auto;
+}
+.row .card .card-content{
+    width: 100%;
+    padding: 0 60px;
+}
+.row .card img{
+    /* max-width: 100%; */
+    width: 100%;
+    height: 100%;
+    /* width: 100%; */
+    display: block;
+}
+.row .card span{
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+.row .card p{
+    font-size: 20px;
+}
+.row .card .card-body{
+    position: relative;
+    overflow: hidden;
+    /* padding: 0; */
+    padding: 0 ;
+}
+.row .card .card-body .by-now 
+{   
+    position: absolute;
+    bottom: -48px;
+    /* left: auto; */
+    left: 0px;
+    width: 85%;
+    padding: 10px 0;
+    background-color: #446084;
+    font-size: 18px;
+    margin: 0 30px;
+    opacity: 0.85;
+}
+.row .card .card-body a{
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+.row .card .card-body:hover .by-now{
+    bottom: 0px;
+    display: block;
+    transition: 0.25s ease-in-out;
+}
+.row .card .card-body:hover img{
+    opacity: 0.85;
+    transition: 0.25s ease-in-out;
+}
+
+
+@keyframes animatedAccount{
+    0%{
+        transform: scale(0,1);
+    }
+    50%{
+        transform: scale(1,1);
+    }
+    100%{
+        transform: scale(0,1);
+    }
+}
+
+@keyframes animatedByNow{
+    0%{
+        transform: scale(1,0);
+    }
+    100%{
+        transform: scale(1,1);
+
+    }
+}

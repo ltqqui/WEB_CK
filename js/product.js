@@ -1,3 +1,5 @@
+
+
 var Product=[
     {id:1, name:'Adidas prophere black-white',price:'60',img:'../img/products/car3.jpg'},
     {id:2, name:'Adidas prophere customize',price:'40',img:'../img/products/adidas-prophere-black-white.png'},
@@ -86,3 +88,40 @@ function renderSaleProduct (){
 }
 renderSaleProduct()
 
+
+function renderProfile(){
+  if(getLocalStorage('userSign')){
+    document.querySelector('.btn-account').innerHTML=getLocalStorage('userSign').userName;
+    document.querySelector('.signIn').style.display='none'
+    document.querySelector('.profile').style.display='block'
+    document.querySelector('.signOut').style.display='inline'
+    document.querySelector('.signUp').style.display='none'
+  }
+  
+  document.querySelector('.signOut').onclick=function signOut(){
+      localStorage.removeItem('userSign');
+    window.location.reload();
+  }
+}
+renderProfile()
+
+function saveLocalStorage(ob,key){
+  var str=JSON.stringify(ob);
+  localStorage.setItem(key,str);
+}
+
+function getLocalStorage(key){
+ if(localStorage.getItem(key)){
+  var str= localStorage.getItem(key);
+  var ob=JSON.parse(str);
+  return ob;
+ }
+ return undefined;
+}
+window.onload = function () {
+  userSign = getLocalStorage("userSign");
+  if (userSign === undefined) {
+      userSign = {};
+  }
+  console.log(userSign)
+};

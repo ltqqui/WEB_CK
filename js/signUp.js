@@ -1,3 +1,6 @@
+
+
+
 var signUpList=[];
 
 function hiddenPassword(){
@@ -40,8 +43,9 @@ function kiemTraTrung(arr,user){
             alert('The Email was registered' )
             return false
         }
-        else 
+        else {
         return true
+        }
     }
 }
 
@@ -81,6 +85,7 @@ function themUser() {
     return ;
     signUpList.push(user)
     saveLocalStorage(signUpList,'signUpList')
+    alert('Sign up successful')
     window.location.href="../html/SignIn.html"
 };
 console.log(signUpList)
@@ -104,7 +109,7 @@ window.onload = function () {
     if (signUpList == undefined) {
         signUpList = [];
     }
-    console.log(signUpList)
+    // console.log(signUpList)
   };
 
 

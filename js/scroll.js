@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function(){
     $(window).scroll(function(){
         if($(this).scrollTop()){
             $('.fa-bars').addClass('text-light');

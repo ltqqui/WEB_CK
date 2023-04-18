@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(../img/logo/4bivpnvyr8lj16w5.jpg);
+    /* background-image: url(../img/logo/4bivpnvyr8lj16w5.jpg); */
     background-size: cover;
     background-position: center;
 }
@@ -110,7 +110,13 @@ nav{
 .account-list  li:last-child {
     border-radius: 0 0 4px 4px;
 }
-
+.signOut{
+    display: none;
+    font-size: 20px;
+}
+.profile{
+    display: none;
+}
 .search-cart{
     width:20%;
     display: flex;
@@ -196,6 +202,31 @@ nav{
     text-align: center;
     margin-top: 150px;
     width: 100%;
+}
+
+.info input{
+    width: 60%;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    border-bottom: 2px solid ;
+    margin-bottom: 25px;
+}
+
+.info h2{
+    display: inline ;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.productHistory{
+    padding: 0 50px;
+}
+
+.productHistory h2{
+    margin-left: 50px;
 }
 
 @keyframes animatedAccount{

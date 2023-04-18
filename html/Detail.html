@@ -23,7 +23,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./Detail.css" />
+    <link rel="stylesheet" href="../css/Detail.css" />
   </head>
 
   <body>
@@ -31,38 +31,42 @@
       <!-- <div class="welcome">
             <span>Welcome to our store </span>
         </div> -->
-      <header class="header">
-        <div class="logo">
-          <a href="./index.html">
-            <span>Q&T.vn</span>
-          </a>
-        </div>
-        <i class="fa-solid fa-bars"></i>
-        <nav>  
-          <ul class="menu ">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <div class="search-cart">
-            <div class="search">
-              <a href="#"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="cart">
-              <a href="#"><i class="fa fa-cart-shopping"></i></a>
-            </div>
+        <header class="header">
+          <div class="logo">
+            <a href="./index.html">
+              <span>Q&T.vn</span>
+            </a>
           </div>
-        </nav>
-        <div class="account">
+          <i class="fa-solid fa-bars"></i>
+          <nav>  
+            <ul class="menu ">
+              <li><a href="../html/index.html">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="search-cart">
+              <div class="search">
+                <a href="#"><i class="fa fa-search"></i></a>
+              </div>
+              <div class="cart">
+                <a href="#"><i class="fa fa-cart-shopping"></i></a>
+              </div>
+            </div>
+          </nav>
+          <div class="account">
             <button class="btn-account">Account</button>
           <ul class="account-list">  
-            <li ><a href="#">Sign up</a></li>
-            <li> <a href="#">Sign in </a></li>
-            <li ><a href="#">Sign out</a></li>
+            <li ><a href="./SignUp.html"class="signUp">Sign up</a></li>
+            <li> <a href="./Profile.html" class="profile">Profile</a></li>
+            <li> <a href="./SignIn.html" class="signIn">Sign in </a></li>
+            <li ><button class="signOut btn">Sign out</button></li>
           </ul>
         </div>
-      
-      </header>
+        </header>
+
+        <div class="content">
+          
+        </div>
     </div>
     <!-- cdn bootstrap -->
     <script
@@ -72,7 +76,7 @@
     ></script>
     <!-- cdn jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../scroll.js"></script>
-    <script src="./product.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script type="module" src="../js/detail.js"></script> 
   </body>
 </html>

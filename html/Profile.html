@@ -25,12 +25,8 @@
       <link rel="stylesheet" href="../css/Profile.css" />
       <title>Title</title>
   </head>
-
   <body>
     <div class="wrapper">
-      <!-- <div class="welcome">
-            <span>Welcome to our store </span>
-        </div> -->
       <header class="header">
         <div class="logo">
           <a href="./index.html">
@@ -54,16 +50,17 @@
           </div>
         </nav>
         <div class="account">
-            <button class="btn-account">Account</button>
-          <ul class="account-list">  
-            <li ><a href="./SignUp.html" class="signUp">Sign up</a></li>
-            <li> <a href="./SignIn.html" class="signIn">Sign in </a></li>
-            <li> <a href="./Profile.html" class="profile">Profile</a></li>
-            <li ><a href="#">Sign out</a></li>
-          </ul>
-        </div>
+          <button class="btn-account">Account</button>
+        <ul class="account-list">  
+          <li ><a href="./SignUp.html"class="signUp">Sign up</a></li>
+          <li> <a href="./Profile.html" class="profile">Profile</a></li>
+          <li> <a href="./SignIn.html" class="signIn">Sign in </a></li>
+          <li ><button class="signOut btn">Sign out</button></li>
+        </ul>
+      </div>
       </header>
       <div class="row info">
+        <h2>Information </h2>
         <div class="col-6">
             <i class="fa-solid fa-envelope"></i>
             <input type="email" placeholder="Email" id="email" >
@@ -80,15 +77,37 @@
             <input type="text" id="name" placeholder="Full name" >
             <br>
             <p class="tbName text-danger"></p>
-            <i class="fa-solid fa-key"></i>
-            <input type="password" id="pas" placeholder="Input your password">
-            <span class="pas">
-                <i class="fa-solid fa-eye" id="hidden1" onclick="hiddenPassword()"></i>
-            <i class="fa-solid fa-eye-slash"  id="hidden2" onclick="hiddenPassword()"></i>
-            </span>
-            <br>
-            <p class="tbPas text-danger"></p>
         </div>
+      </div>
+      <div class="productHistory">
+        <h2> Product history</h2>
+        <table class="table">
+          <thead>
+            <th>STT</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Image</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>adidas</td>
+              <td>30</td>
+              <td>
+                <button class="btn btn-primary tang">+</button>
+                1
+                <button class="btn btn-primary giam">-</button>
+              </td>
+              <td>2ad dfd</td>
+              <td>
+                <button class="btn btn-danger">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <!-- cdn bootstrap -->
@@ -102,8 +121,7 @@
     <!-- cdn jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/scroll.js"></script>
-    <script src="../js/signUp.js"></script>
-    <script src="../js/Profile.js"></script>
+    <script type="module" src="../js/Profile.js"></script>
     <!-- <script src="../js/userSignUp.js"></script> -->
     <script src="../js/validation.js"></script>
     <!-- <script src="../js/product.js"></script> -->

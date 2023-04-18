@@ -1,25 +1,20 @@
-function saveLocalStorage(ob,key){
-    var str=JSON.stringify(ob);
-    localStorage.setItem(key,str);
+import {getLocalStorage} from './storage.js'
+
+export function renderProfile(){
+  if(getLocalStorage('userSignIn')){
+    document.querySelector('.btn-account').innerHTML=getLocalStorage('userSignIn').userName;
+    document.querySelector('.signIn').style.display='none'
+    document.querySelector('.profile').style.display='block'
+    document.querySelector('.signOut').style.display='inline'
+    document.querySelector('.signUp').style.display='none'
+  }
+  
+  document.querySelector('.signOut').onclick=function signOut(){
+      localStorage.removeItem('userSignIn');
+    window.location.reload();
+    window.location.href='../html/index.html'
+  }
 }
 
-function getLocalStorage(key){
-   if(localStorage.getItem(key)){
-    var str= localStorage.getItem(key);
-    var ob=JSON.parse(str);
-    return ob;
-   }
-   return undefined;
-}
-// window.onload = function () {
-//     userSign = getLocalStorage("userSign");
-//     if (userSign === undefined) {
-//         userSign = {};
-//     }
-//     console.log(userSign)
-//   };
+renderProfile()
 
-
-  var signUpList=getLocalStorage('signUpList');
-  var listProfile=[...signUpList]   
-  console.log("profile",listProfile)

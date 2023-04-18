@@ -1,3 +1,4 @@
+import {getLocalStorage,saveLocalStorage} from './storage.js'
 
 
 
@@ -20,6 +21,9 @@ function hiddenPassword(){
     }
 }
 
+document.querySelector("#hidden1").onclick =hiddenPassword
+document.querySelector("#hidden2").onclick =hiddenPassword
+
 function hiddenConfirmPassword(){
     var pas=document.querySelector('#confirmPas');
     var hidden3=document.querySelector('#hidden3');
@@ -36,6 +40,10 @@ function hiddenConfirmPassword(){
         hidden4.style.display="none" 
     }
 }
+
+document.querySelector("#hidden3").onclick =hiddenConfirmPassword
+document.querySelector("#hidden4").onclick =hiddenConfirmPassword
+
 
 function kiemTraTrung(arr,user){
     for(var i of arr){
@@ -87,23 +95,16 @@ function themUser() {
     saveLocalStorage(signUpList,'signUpList')
     alert('Sign up successful')
     window.location.href="../html/SignIn.html"
+    console.log(signUpList)
 };
-console.log(signUpList)
+document.querySelector("#form").onchange=themUser
+document.querySelector("#them").onclick=themUser
 
 
-function saveLocalStorage(ob,key){
-    var str=JSON.stringify(ob);
-    localStorage.setItem(key,str);
-}
 
-function getLocalStorage(key){
-   if(localStorage.getItem(key)){
-    var str= localStorage.getItem(key);
-    var ob=JSON.parse(str);
-    return ob;
-   }
-   return undefined;
-}
+// console.log(getLocalStorage('signUpList'))
+
+
 window.onload = function () {
     signUpList = getLocalStorage("signUpList");
     if (signUpList == undefined) {
@@ -115,86 +116,3 @@ window.onload = function () {
 
 
 
-
-// var valid
-
-//     function kiemTraEmail(){
-//         var regex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-//         if((document.querySelector('#email').value)===''){
-//             document.querySelector('.tbEmail').innerHTML='Email not be empty!!'
-//             valid= false
-//             console.log(valid)
-//             return false
-//         }
-//          if(!regex.test(document.querySelector('#email').value)){
-//             document.querySelector('.tbEmail').innerHTML='Email is (0-9),(a-z),(A-Z) and (*/...)!!!!'
-//             valid=false
-//             console.log(valid)
-//             return false
-//         }
-//         else {
-//         document.querySelector('.tbEmail').innerHTML=''
-//         valid=true
-//         console.log(valid)
-//         return true
-//         }
-//     }
-
-//     function kiemTraName(){
-//         var regex=/\b([A-ZÀ-ÿ][-,a-z.']+[ ]*)+/
-        
-//         if((document.querySelector('#name').value)===''){
-//             document.querySelector('.tbName').innerHTML='Name not be empty!!'
-//             valid=false
-//             return false
-//         }
-//         if(!regex.test(document.querySelector('#name').value)){
-//             document.querySelector('.tbName').innerHTML='Names are the characters a-z!!'
-//             valid=false
-//             return false
-//         }
-//         else {
-//             document.querySelector('.tbName').innerHTML=''
-//         // valid=true
-//         return true
-//         }
-//     }
-
-//     function kiemTraPas(){
-//         var regex=/^[A-Za-z]\w{7,14}$/
-//         if((document.querySelector('#pas').value)===''){
-//             document.querySelector('.tbPas').innerHTML='Password not be empty!!'
-//             valid=false
-//             return false
-//         }
-//         if(!regex.test(document.querySelector('#pas').value)){
-//             document.querySelector('.tbPas').innerHTML='Password is (0-9),(a-z),(A-Z) !!'
-//             valid=false
-//             return false
-//         }
-//         else {
-//         document.querySelector('.tbPas').innerHTML=''
-//         // valid==true
-//         return true
-//         }
-//     }
-
-//     function kiemTraConfirm(){
-//         if((document.querySelector('#confirmPas').value)===''){
-//             document.querySelector('.tbConfirm').innerHTML='Confirm password not be empty!!'
-//             // valid=false
-//             return false
-//         }
-//         if((document.querySelector('#pas').value)!=(document.querySelector('#confirmPas').value)){
-//             document.querySelector('.tbConfirm').innerHTML='Not match Password'
-//             // valid=false
-//             return false
-//         }
-//         else {
-//         document.querySelector('.tbConfirm').innerHTML=''
-//         // valid=true
-//         return true
-//         }
-//     }
-
-//     console.log(valid+'123')

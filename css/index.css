@@ -114,6 +114,8 @@ nav{
     font-size: 20px;
 }
 
+
+
 .search-cart{
     width:20%;
     display: flex;
@@ -194,10 +196,6 @@ nav{
     left: 0;
     transform: scale(0);
 }
-
-
-
-
 
 /* ------------ carousel*/
 .slider {

@@ -111,6 +111,11 @@ nav{
     border-radius: 0 0 4px 4px;
 }
 
+.signOut{
+    display: none;
+    font-size: 30px;
+}
+
 .search-cart{
     width:20%;
     display: flex;
@@ -434,6 +439,7 @@ footer .row .col-4 img{
     .sticky  .account-list li a{
         color: #fff;
     }
+
 
 
     .form{

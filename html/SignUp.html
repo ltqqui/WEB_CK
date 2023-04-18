@@ -58,13 +58,13 @@
           <ul class="account-list">  
             <li ><a href="./SignUp.html">Sign up</a></li>
             <li> <a href="./SignIn.html">Sign in </a></li>
-            <li ><a href="#">Sign out</a></li>
+            <li ><a href="#" class="signOut">Sign out</a></li>
           </ul>
         </div>
       </header>
 
       <div class="form-signUp">
-        <div class="form" onchange="themUser()">
+        <div class="form" id="form">
              <div class="form-header">
                 <h3>Sign Up</h3>
              </div>
@@ -85,23 +85,23 @@
                 <i class="fa-solid fa-key"></i>
                 <input type="password" id="pas" placeholder="Input your password">
                 <span class="pas">
-                    <i class="fa-solid fa-eye" id="hidden1" onclick="hiddenPassword()"></i>
-                <i class="fa-solid fa-eye-slash"  id="hidden2" onclick="hiddenPassword()"></i>
+                    <i class="fa-solid fa-eye" id="hidden1" ></i>
+                <i class="fa-solid fa-eye-slash"  id="hidden2"></i>
                 </span>
                 <br>
                 <p class="tbPas text-danger"></p>
                 <i class="fa-solid fa-square-check"></i>
                 <input type="password" placeholder="Confirm password" id="confirmPas" >
                 <span class="confirmPas">
-                    <i class="fa-solid fa-eye" id="hidden3" onclick="hiddenConfirmPassword()"></i>
-                    <i class="fa-solid fa-eye-slash" id="hidden4" onclick="hiddenConfirmPassword()"></i>
+                    <i class="fa-solid fa-eye" id="hidden3" ></i>
+                    <i class="fa-solid fa-eye-slash" id="hidden4"></i>
                 </span>
                 <br>
                 <p class="tbConfirm text-danger"></p>
              </div>
              <div class="form-footer">
                 <a href="../html/SignIn.html">Sign in</a><br>
-                <button class="button" id="them" onclick="themUser()" >Sign up</button>
+                <button class="button" id="them" >Sign up</button>
              </div>
         </div>
       </div>
@@ -117,7 +117,7 @@
     <!-- cdn jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/scroll.js"></script>
-    <script src="../js/signUp.js"></script>
+    <script  type="module" src="../js/signUp.js"></script>
     <script src="../js/userSignUp.js"></script>
     <script src="../js/validation.js"></script>
     <!-- <script src="../js/product.js"></script> -->

@@ -54,13 +54,14 @@
           </div>
         </nav>
         <div class="account">
-            <button class="btn-account">Account</button>
-          <ul class="account-list">  
-            <li ><a href="./SignUp.html">Sign up</a></li>
-            <li> <a href="./SignIn.html">Sign in </a></li>
-            <li ><a href="#">Sign out</a></li>
-          </ul>
-        </div>
+          <button class="btn-account">Account</button>
+        <ul class="account-list">  
+          <li ><a href="./SignUp.html"class="signUp">Sign up</a></li>
+          <li> <a href="./Profile.html" class="profile">Profile</a></li>
+          <li> <a href="./SignIn.html" class="signIn">Sign in </a></li>
+          <li ><button class="signOut btn">Sign out</button></li>
+        </ul>
+      </div>
       </header>
 
       <div class="form-signIp">
@@ -76,8 +77,8 @@
                 <i class="fa-solid fa-key"></i>
                 <input type="password" id="pas" placeholder="Input your password">
                 <span class="pas">
-                    <i class="fa-solid fa-eye" id="hidden1" onclick="hiddenPassword()"></i>
-                <i class="fa-solid fa-eye-slash"  id="hidden2" onclick="hiddenPassword()"></i>
+                    <i class="fa-solid fa-eye" id="hidden1" ></i>
+                <i class="fa-solid fa-eye-slash"  id="hidden2"></i>
                 </span>
                 <br>
                 <p class="tbPas text-danger"></p>
@@ -85,7 +86,7 @@
              <div class="form-footer">
                 <a href="../html/SignUp.html
                 ">Sign up</a><br>
-                <button class="button" id="signIn" onclick="dangNhap()" >Sign up</button>
+                <button class="button" id="signIn"  >Sign up</button>
              </div>
         </div>
       </div>
@@ -101,8 +102,7 @@
     <!-- cdn jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/scroll.js"></script>
-    <script src="../js/singIn.js"></script>
-    <script src="../js/signUp.js"></script>
+    <script type="module"  src="../js/singIn.js"></script>
     <script src="../js/userSignIn.js"></script>
     <script src="../js/validation.js"></script>
     <!-- <script src="../js/product.js"></script> -->

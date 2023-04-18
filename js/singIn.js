@@ -1,61 +1,82 @@
 
-var userSign={};
+import {saveLocalStorage,getLocalStorage} from './storage.js';
+import { renderProfile } from './profile.js';
+
+var userSignIn={};
+renderProfile();
+
+
+function hiddenPassword(){
+    var pas=document.querySelector('#pas');
+    var hidden1=document.querySelector('#hidden1');
+    var hidden2=document.querySelector('#hidden2');
+    if(pas.type==='password'){
+        pas.type='text';
+        hidden2.style.display="inline"
+        hidden1.style.display="none";
+      
+    }
+    else{
+        pas.type='password';
+        hidden2.style.display="none"    
+        hidden1.style.display="inline";
+    }
+}
+
+
+document.querySelector("#hidden1").onclick =hiddenPassword
+document.querySelector("#hidden2").onclick =hiddenPassword
 
 
 
 function dangNhap(){
     var userName=document.querySelector('#userName').value;
     var password=document.querySelector('#pas').value;
-    userSign=new UserSignIn(userName,password);
-    var valid=kiemTraRong(userSign.userName, ".tbUserName", "User name")&kiemTraRong(userSign.password, ".tbPas", "Password")
+    userSignIn=new UserSignIn(userName,password);
+    var valid=kiemTraRong(userSignIn.userName, ".tbUserName", "User name")&kiemTraRong(userSignIn.password, ".tbPas", "Password")
 
-    if(kiemTraRong(userSign.userName, ".tbUserName", "User name")){
-       valid&= kiemTraUserName(userSign.userName, ".tbUserName", "User name")
+    if(kiemTraRong(userSignIn.userName, ".tbUserName", "User name")){
+       valid&= kiemTraUserName(userSignIn.userName, ".tbUserName", "User name")
     }
-    if(kiemTraRong(userSign.password, ".tbPas", "Password")){
-    valid&=kiemTraRong(userSign.password, ".tbPas", "Password")
-    }
-    if(!valid)
-    return ;
-    saveLocalStorage(userSign,'userSign')
+    if(kiemTraRong(userSignIn.password, ".tbPas", "Password")){
+    valid&=kiemTraRong(userSignIn.password, ".tbPas", "Password")
+}
+if(!valid)
+return ;
+
    var arr= getLocalStorage('signUpList')
    if(arr!=undefined){
     for(var i of arr){
-        if(i.userName===userSign.userName && i.password===userSign.password){
+        if(i.userName==userSignIn.userName && i.password==userSignIn.password){
             var dn=true;
         }
         else 
         dn=false                                                                                                    
        }
    }
-   if(dn===true){
+   if(dn==true){
     alert('Đăng nhập thành công')
+    saveLocalStorage(userSignIn,'userSignIn')
     window.location.href='../html/index.html'
-    document.querySelector('.btn-account').innerHTML=getLocalStorage('userSign').userName
+    document.querySelector('.btn-account').innerHTML=getLocalStorage('userSignIn').userName
    }
    else {
     alert("User name or password incorrect")
+    return ;
    }
-}
 
-function saveLocalStorage(ob,key){
-    var str=JSON.stringify(ob);
-    localStorage.setItem(key,str);
+   console.log(userSignIn)
 }
+document.querySelector('#signIn').onclick= dangNhap
+document.querySelector(".form").onchange=dangNhap
 
-function getLocalStorage(key){
-   if(localStorage.getItem(key)){
-    var str= localStorage.getItem(key);
-    var ob=JSON.parse(str);
-    return ob;
-   }
-   return undefined;
-}
+
+
 window.onload = function () {
-    userSign = getLocalStorage("userSign");
-    arr=getLocalStorage('signUpList');
-    if (userSign === undefined) {
-        userSign = {};
+    userSignIn = getLocalStorage("userSignIn");
+   var arr=getLocalStorage('signUpList');
+    if (userSignIn === undefined) {
+        userSignIn = {};
     }
-    console.log(userSign)
+    console.log(userSignIn)
   };

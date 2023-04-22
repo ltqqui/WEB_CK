@@ -1,4 +1,4 @@
-function UserProfile(email,userName,name,password,history){
+export function UserProfile(email,userName,name,password,history){
     this.email=email
     this.userName=userName;
     this.name=name;
@@ -6,4 +6,3 @@ function UserProfile(email,userName,name,password,history){
     this.history=[] 
 }
 
-export default UserProfile

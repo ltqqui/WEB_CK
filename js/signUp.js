@@ -5,6 +5,7 @@ import { UserProfile } from './userProfile.js';
 
 var profileList=getLocalStorage("profileList")
 var signUpList=[];
+var profileList=[]
 // var profileList=[]
 
 function hiddenPassword(){

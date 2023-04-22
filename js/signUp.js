@@ -1,8 +1,11 @@
 import {getLocalStorage,saveLocalStorage} from './storage.js'
+// import { profileList } from './Profile.js';
+import { UserProfile } from './userProfile.js';
 
 
-
+var profileList=getLocalStorage("profileList")
 var signUpList=[];
+// var profileList=[]
 
 function hiddenPassword(){
     var pas=document.querySelector('#pas');
@@ -64,6 +67,7 @@ function themUser() {
     var pas=document.querySelector('#pas').value;
     var confirmPassword=document.querySelector("#confirmPas").value
     var user=new UserSignUp(email,userName,name,pas);
+    var userProfile=new UserProfile(email,userName,name,pas)
     var valid =
     kiemTraRong(user.email, ".tbEmail", "Email") &
     kiemTraRong(user.userName, ".tbUserName", "Use name") &
@@ -93,9 +97,13 @@ function themUser() {
     return ;
     signUpList.push(user)
     saveLocalStorage(signUpList,'signUpList')
+    profileList.push(userProfile)
+    saveLocalStorage(profileList,'profileList')
+
     alert('Sign up successful')
-    window.location.href="../html/SignIn.html"
+    console.log(profileList)
     console.log(signUpList)
+    // window.location.href="../html/SignIn.html"
 };
 document.querySelector("#form").onchange=themUser
 document.querySelector("#them").onclick=themUser

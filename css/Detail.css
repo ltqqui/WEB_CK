@@ -123,6 +123,7 @@ nav{
     justify-content: space-between;
     text-align: right;
 }
+
 .search{
     width: 50%;
 }
@@ -134,6 +135,9 @@ nav{
 }
 .cart i{
     font-size: 25px;
+}
+.body-cart img{
+    width: 15%;
 }
 .menu{
     margin-bottom: 0;
@@ -203,6 +207,48 @@ nav{
 .content .col2 {
     padding-top: 120px;
 }
+
+
+
+footer{
+    background-color: #446084;
+    width: 100%;
+    color: #fff;
+}
+
+footer .row{   
+    margin-top: 50px; 
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 0 ;
+}
+
+footer .row .col-4{
+    padding: 0 100px;
+    /* margin: 0 20px; */
+}
+footer .row .col-4 a{
+    display: block;
+    margin: 20px 0;
+    color: #fff;
+}
+footer .row .col-4 h4{
+    font-weight: 400;
+}
+footer .row .col-4 i{
+    margin-right: 10px;
+}
+footer .col2 h4{
+    text-align: center;
+}
+footer .row .col2 a{
+    margin-left: 90px;
+}
+footer .row .col-4 img{
+    width: 40%;
+}
+
+
 
 @keyframes animatedAccount{
     0%{

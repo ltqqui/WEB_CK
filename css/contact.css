@@ -6,7 +6,7 @@
 *, 
 *:before, 
 *:after {
-   include box-sizing(border-box); 
+   include: box-sizing(border-box); 
 }
 
 html, body {
@@ -62,6 +62,45 @@ form {
 .left {
      margin-right: 2%; 
 }
+
+footer{
+   background-color: #446084;
+   width: 100%;
+   color: #fff;
+}
+
+footer .row{   
+   margin-top: 50px; 
+   box-sizing: border-box;
+   width: 100%;
+   padding: 30px 0 ;
+}
+
+footer .row .col-4{
+   padding: 0 100px;
+   /* margin: 0 20px; */
+}
+footer .row .col-4 a{
+   display: block;
+   margin: 20px 0;
+   color: #fff;
+}
+footer .row .col-4 h4{
+   font-weight: 400;
+}
+footer .row .col-4 i{
+   margin-right: 10px;
+}
+footer .col2 h4{
+   text-align: center;
+}
+footer .row .col2 a{
+   margin-left: 90px;
+}
+footer .row .col-4 img{
+   width: 40%;
+}
+
 
 
 @media (max-width: 480px) {

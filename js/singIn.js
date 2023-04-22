@@ -1,8 +1,8 @@
 import { saveLocalStorage, getLocalStorage } from "./storage.js";
-import { renderProfile } from "./profile.js";
+// import { renderProfile } from "./Profile.js";
 
 var userSignIn = {};
-renderProfile();
+// renderProfile();
 
 function hiddenPassword() {
   var pas = document.querySelector("#pas");

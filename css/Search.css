@@ -292,3 +292,35 @@ nav{
     transform: scale(1);
 }
 }
+.content h2{
+    margin-left: 50px;
+    text-align: center;
+    color: #446084;
+}
+.content input{
+    border: none;
+    border-bottom: 2px solid red;
+    border-top: 2px solid rgb(134, 130, 130);
+    width: 90%;
+
+}
+@media screen and (max-width: 1024px) {
+
+
+}
+@media screen and (max-width: 600px) {
+    .menu{
+        display: none;
+    }
+    .search-cart{
+        display: none;
+    }
+    .content .input-search{
+        width: 100%;
+        border: 2px solid rgb(60, 60, 32);
+        height:60px;
+        margin: 20px auto;
+    }
+    
+
+}

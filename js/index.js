@@ -49,7 +49,7 @@
     document.querySelector('.signOut').onclick=function signOut(){
         localStorage.removeItem('userSignIn');
       window.location.reload();
-      window.location.href='./html/index.html'
+      window.location.href='../index.html'
     }
   }
   

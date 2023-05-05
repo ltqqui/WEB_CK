@@ -58,7 +58,7 @@ function dangNhap() {
         alert("Đăng nhập thành công");
         saveLocalStorage(userSignIn, "userSignIn");
         document.querySelector(".btn-account").innerHTML =getLocalStorage("userSignIn").userName;
-        window.location.href='../html/index.html'
+        window.location.href='../index.html'
     }
     else{
         alert("User name or password incorrect");

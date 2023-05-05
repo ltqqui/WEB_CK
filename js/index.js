@@ -3,7 +3,7 @@
 // import { getLocalStorage,saveLocalStorage } from "./storage.js";
 
  const newProduct=[
-    {id:1, name:'Adidas prophere black-white',desc:'The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.',price:'60',img:'./img/products/car3.jpg',},
+    {id:1, name:'Adidas prophere black-white',desc:'The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.',price:'60',img:'./img/products/car3.jpg'},
     {id:2, name:'Adidas prophere customize',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.",price:'40',img:'./img/products/adidas-prophere-black-white.png'},
     {id:3, name:'Nike shox',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.",price:'80',img:'./img/products/nike-shox-tl.png'},
     {id:4, name:'Adidas swift run',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.  ",price:'6.60',img:'./img/products/adidas-swift-run.png'},

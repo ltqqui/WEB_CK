@@ -112,7 +112,7 @@ $(document).ready(function(){
     document.querySelector('.signOut').onclick=function signOut(){
         localStorage.removeItem('userSignIn');
       window.location.reload();
-      window.location.href='/index.html'
+      window.location.href='./index.html'
     }
   }
   

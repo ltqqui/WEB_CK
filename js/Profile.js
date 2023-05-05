@@ -28,7 +28,7 @@
   document.querySelector('.signOut').onclick=function signOut(){
       localStorage.removeItem('userSignIn');
     window.location.reload();
-    window.location.href='../html/index.html'
+    window.location.href='../index.html'
   }
 }
 
@@ -36,10 +36,7 @@ renderProfile()
 var userSignIn=getLocalStorage("userSignIn");
 var profileList=getLocalStorage("profileList");
 
-//  setTimeout( 
-// },2000)
 
-let arr = [1, 2, 3, 4, 5];
 
 function remove(id){
   for(var j of profileList){

@@ -41,7 +41,7 @@
         var aTag = document.querySelectorAll(".buy-now");
         // aTag.href='../html/SignIn.html'
         for(var i of aTag){
-            i.href='./html/SignIn.html'
+            i.href='../html/SignIn.html'
         }  
         console.log(aTag)
     }
@@ -49,7 +49,7 @@
     document.querySelector('.signOut').onclick=function signOut(){
         localStorage.removeItem('userSignIn');
       window.location.reload();
-      window.location.href='./index.html'
+      window.location.href='../index.html'
     }
   }
   
@@ -68,7 +68,7 @@
         <div class="card-body">
           <img src="${i.img}" class="" alt="" />
           <div class="by-now">
-            <a href="./html/Detail.html" class="buy-now" onclick="saveID(${i.id})">By now</a>
+            <a href="../html/Detail.html" class="buy-now" onclick="saveID(${i.id})">By now</a>
           </div>
         </div>
         <div class="card-content">
@@ -97,14 +97,14 @@ function renderSaleProduct (){
       <div class="card-body">
         <img src="${i.img}" class="w-100" alt="" />
         <div class="by-now">
-          <a href="./html/Detail.html"onclick="saveID(${i.id})">By now</a>
+          <a href="../html/Detail.html"onclick="saveID(${i.id})">By now</a>
         </div>
       </div>
       <div class="card-content">
         <p>${i.name}</p>
         <span>${i.price}</span>
       </div>
-      <img src="./img/logo/sales.png" class="logo-sale" alt="" />
+      <img src="../img/logo/sales.png" class="logo-sale" alt="" />
     </div>
         `
     }

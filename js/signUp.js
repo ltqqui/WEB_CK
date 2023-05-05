@@ -104,7 +104,7 @@ function themUser() {
     alert('Sign up successful')
     console.log(profileList)
     console.log(signUpList)
-    // window.location.href="../html/SignIn.html"
+    window.location.href="../html/SignIn.html"
 };
 document.querySelector("#form").onchange=themUser
 document.querySelector("#them").onclick=themUser

@@ -2,6 +2,34 @@ import {Product} from "./product.js";
 // console.log(Product) 
 
 
+function renderProfile(){
+  if(getLocalStorage('userSignIn')){
+    document.querySelector('.btn-account').innerHTML=getLocalStorage('userSignIn').userName;
+    document.querySelector('.signIn').style.display='none'
+    document.querySelector('.profile').style.display='block'
+    document.querySelector('.signOut').style.display='inline'
+    document.querySelector('.signUp').style.display='none'
+   
+  }
+  else{
+     
+      var aTag = document.querySelectorAll(".buy-now");
+      // aTag.href='../html/SignIn.html'
+      for(var i of aTag){
+          i.href='../html/SignIn.html'
+      }  
+      console.log(aTag)
+  }
+  
+  document.querySelector('.signOut').onclick=function signOut(){
+      localStorage.removeItem('userSignIn');
+    window.location.reload();
+    window.location.href='../html/index.html'
+  }
+}
+
+renderProfile()
+
 document.querySelector(".input-search").oninput=function renderSearch(){
     var valueSearch= document.querySelector(".input-search").value
     var productSearch

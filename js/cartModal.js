@@ -43,6 +43,7 @@ $(document).ready(function(){
                 }
             }
             document.querySelector(".body-cart").innerHTML=html
+            
         }
         renderCart()
     })    

@@ -55,7 +55,7 @@ function dangNhap() {
      }
     }
     if(dn===true){
-        alert("Đăng nhập thành công");
+        alert("Sign in successfully");
         saveLocalStorage(userSignIn, "userSignIn");
         document.querySelector(".btn-account").innerHTML =getLocalStorage("userSignIn").userName;
         window.location.href='../index.html'

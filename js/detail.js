@@ -88,6 +88,7 @@ renderProfile()
     renderDetail()
     saveLocalStorage(profileList,'profileList')
     renderProfile()
+    window.location.reload()
     // renderCart()
 }
 

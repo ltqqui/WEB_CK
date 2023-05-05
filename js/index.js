@@ -41,7 +41,7 @@
         var aTag = document.querySelectorAll(".buy-now");
         // aTag.href='../html/SignIn.html'
         for(var i of aTag){
-            i.href='../html/SignIn.html'
+            i.href='./html/SignIn.html'
         }  
         console.log(aTag)
     }
@@ -49,7 +49,7 @@
     document.querySelector('.signOut').onclick=function signOut(){
         localStorage.removeItem('userSignIn');
       window.location.reload();
-      window.location.href='../index.html'
+      window.location.href='./index.html'
     }
   }
   

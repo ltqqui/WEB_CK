@@ -2,6 +2,28 @@
 // import { renderProfile } from "./profile.js";
 // import { getLocalStorage,saveLocalStorage } from "./storage.js";
 
+const Product=[
+  {id:1, name:'Adidas prophere black-white',desc:'The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.',price:'60',img:'../img/products/car3.jpg',quantity:1},
+  {id:2, name:'Adidas prophere customize',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.",price:'40',img:'../img/products/adidas-prophere-black-white.png',quantity:1},
+  {id:3, name:'Nike shox',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.",price:'80',img:'../img/products/nike-shox-tl.png',quantity:1},
+  {id:4, name:'Adidas swift run',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.  ",price:'6.60',img:'../img/products/adidas-swift-run.png',quantity:1},
+  {id:5, name:'Adidas tenisky super star',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.",price:'80',img:'../img/products/adidas-tenisky-super-star.png',quantity:1},
+  {id:6, name:'Nike air max ',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.",price:'80',img:'../img/products/nike-air-max-97.png',quantity:1},
+  {id:7,name:'Adidas super star red',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.",price:'80',img:'../img/products/adidas-super-star-red.png',quantity:1},
+  {id:8,name:'Nike',desc:"Nike shoe is the rare high-percentage shooter who's also a coach's dream on D. Designed for his unrivaled 2-way game, the PG 4 unveils a new cushioning system that's lightweight, articulated and responsive, ideal for players like PG who go hard every play.",price:'5.20',img:'../img/products/nike-react-element.png',quantity:1},
+  {id:9,name:'Nike adapt',desc:"Nike shoe is the rare high-percentage shooter who's also a coach's dream on D. Designed for his unrivaled 2-way game, the PG 4 unveils a new cushioning system that's lightweight, articulated and responsive, ideal for players like PG who go hard every play.",price:'8.40',img:'../img/products/nike-adapt-bb.png',quantity:1},
+  {id:10,name:'Adidas ultraboost',desc:"Adidas shoe is the rare high-percentage shooter who's also a coach's dream on D. Designed for his unrivaled 2-way game, the PG 4 unveils a new cushioning system that's lightweight, articulated and responsive, ideal for players like PG who go hard every play.",price:'7.50',img:'../img/products/adidas-ultraboost-4.png',quantity:1},
+  {id:11,name:'Adidas yeezy',desc:"Adidas shoe is the rare high-percentage shooter who's also a coach's dream on D. Designed for his unrivaled 2-way game, the PG 4 unveils a new cushioning system that's lightweight, articulated and responsive, ideal for players like PG who go hard every play.",price:'7.50',img:'../img/products/adidas-yeezy-350.png',quantity:1},
+  {id:12,name:'Vans old school',desc:"Vans shoe is the rare high-percentage shooter who's also a coach's dream on D. Designed for his unrivaled 2-way game, the PG 4 unveils a new cushioning system that's lightweight, articulated and responsive, ideal for players like PG who go hard every play.",price:'4.50',img:'../img/products/van-old-school.png',quantity:1},
+  {id:13,name:'Nike sp dunk',desc:"Nike shoe is the rare high-percentage shooter who's also a coach's dream on D. Designed for his unrivaled 2-way game, the PG 4 unveils a new cushioning system that's lightweight, articulated and responsive, ideal for players like PG who go hard every play.",price:'8.90',img:'../img/products/nike-sp-dunk.png',quantity:1},
+  {id:14,name:'Nike flyknit ',desc:"Nike shoe is the rare high-percentage shooter who's also a coach's dream on D. Designed for his unrivaled 2-way game, the PG 4 unveils a new cushioning system that's lightweight, articulated and responsive, ideal for players like PG who go hard every play.",price:'8.20',img:'../img/products/nike-flyknit.png',quantity:1},
+  {id:15,name:'Nike air max 270',desc:"The Nike Coastal Classic Slip-On features sturdy low profile canvas and textile uppers, padded collars, elastic side accents, and signature rubber waffle outsoles.",price:'8.40',img:'../img/products/nike-air-max-270-react.png',quantity:1},
+  {id:16,name:'Nike air max 97 blue',desc:"The Nike Coastal Classic Slip-On features sturdy low profile canvas and textile uppers, padded collars, elastic side accents, and signature rubber waffle outsoles.",price:'6.90',img:'../img/products/nike-air-max-97-blue.png',quantity:1},
+  {id:17,name:'Converse chuck taylor',desc:"The Vans Coastal Classic Slip-On features sturdy low profile canvas and textile uppers, padded collars, elastic side accents, and signature rubber waffle outsoles.",price:'8.90',img:'../img/products/converse-chuck-taylor.png',quantity:1},
+  {id:18,name:'Vans black black',desc:"Vans shoe is the rare high-percentage shooter who's also a coach's dream on D. Designed for his unrivaled 2-way game, the PG 4 unveils a new cushioning system that's lightweight, articulated and responsive, ideal for players like PG who go hard every play.",price:'6.50',img:'../img/products/vans-black-black.png',quantity:1}
+]
+
+
  const newProduct=[
     {id:1, name:'Adidas prophere black-white',desc:'The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.',price:'60',img:'./img/products/car3.jpg',},
     {id:2, name:'Adidas prophere customize',desc:"The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.",price:'40',img:'./img/products/adidas-prophere-black-white.png'},
@@ -26,6 +48,47 @@
     {id:18,name:'Vans black black',desc:"Vans shoe is the rare high-percentage shooter who's also a coach's dream on D. Designed for his unrivaled 2-way game, the PG 4 unveils a new cushioning system that's lightweight, articulated and responsive, ideal for players like PG who go hard every play.",price:'6.50',img:'./img/products/vans-black-black.png'}
   
   ]
+
+
+
+  
+var total=0
+var userSignIn=getLocalStorage("userSignIn")
+var profileList=getLocalStorage("profileList");
+$(document).ready(function(){
+    $('#cart').click(function(){
+        $('.modal').modal('show')
+        function renderCart(){
+            var html=``
+            for(var i of profileList){
+                if(i.userName===userSignIn.userName){
+                   for(var item of i.history){
+                    for(var k of Product ){
+                      if (k.id===item.id){
+                        total+=parseFloat(item.price);
+                        html+=`
+                        <tr>
+                        <td>1</td>
+                        <td >${item.id}</td>
+                        <td>${item.name}</td>
+                        <td>${item.price}$</td>
+                        <td class="text-center">${item.quantity}</td>
+                        <td class="text-center"><img src="${k.img}" alt=""></td>
+                      </tr>
+                        `
+                      }
+                    }
+                    
+                   }
+                }
+            }
+            document.querySelector(".body-cart").innerHTML=html
+            
+        }
+        renderCart()
+    })    
+})
+
   
  function renderProfile(){
     if(getLocalStorage('userSignIn')){
@@ -41,7 +104,7 @@
         var aTag = document.querySelectorAll(".buy-now");
         // aTag.href='../html/SignIn.html'
         for(var i of aTag){
-            i.href='../html/SignIn.html'
+            i.href='./html/SignIn.html'
         }  
         console.log(aTag)
     }
@@ -49,7 +112,7 @@
     document.querySelector('.signOut').onclick=function signOut(){
         localStorage.removeItem('userSignIn');
       window.location.reload();
-      window.location.href='../html/index.html'
+      window.location.href='./index.html'
     }
   }
   
@@ -84,6 +147,8 @@
 
 renderProduct()
 // renderProfile()
+
+
 
 
 

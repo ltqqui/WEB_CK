@@ -23,6 +23,9 @@ var profileList=getLocalStorage("profileList");
 if (userSignIn===undefined){
     userSignIn={}
 }
+if(profileList===undefined){
+    profileList=[]
+}
 $(document).ready(function(){
     $('#cart').click(function(){
         $('.modal').modal('show')

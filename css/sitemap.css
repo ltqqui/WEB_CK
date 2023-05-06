@@ -38,153 +38,139 @@ header ul li:hover::before{
     background: rgba(248, 248, 248, 0.807);
     box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.05);
     transition: all 0.2s ease-out;
-}
-
-
-.logo{
+ }
+ 
+ 
+ .logo{
     width: 20%;
-}
-.logo a{
+ }
+ .logo a{
     display: flex;
     justify-content: space-around;
-}
-.logo a span{
+ }
+ .logo a span{
     width: 100%;
     font-size: 40px;
     margin-left: 0;
     color: #121212BF;
     font-weight: lighter;
-}
-nav{
+ }
+ nav{
     width: 70%;
     display: flex;    
     justify-content: space-between;
     
-}
-.account{
+ }
+ .account{
     width: 10%;
     font-size: 20px;
     color: #121212BF;
     border-radius: 3px;
     cursor: pointer;
-}
-
-
-.btn-account {
+ }
+ 
+ 
+ .btn-account {
     width: 90%;
     padding: 0;
     height: 40px;
     line-height: 40px;
     border-radius: 5px;
     border: none;
-}
-.btn-account:hover .account-list{
+ }
+ .btn-account:hover .account-list{
     display: block;
-}
-.account-list{
+ }
+ .account-list{
     width: 300px;
     height: 300px;
     display: none;
-}
-.account-list  li {
+ }
+ .account-list  li {
     margin-left: -30px;
     width:55%;
     text-align: center      ;
     color: #fff;
     background: rgba(248, 248, 248, 0.807);
-}
-.account-list  li:last-child {
+ }
+ .account-list  li:last-child {
     border-radius: 0 0 4px 4px;
-}
-.profile{
-    display: none;
-}
-.signOut{
+ }
+ .signOut{
     display: none;
     font-size: 20px;
-}
-
-
-
-.search-cart{
+ }
+ .profile{
+    display: none;
+ }
+ .search-cart{
     width:20%;
     display: flex;
     justify-content: space-between;
     text-align: right;
-}
-.search{
+ }
+ .search{
     width: 50%;
-}
-.cart{
-    width: 50%;
+ }
+ .cart{
     margin-right: 20px;
-}
-.search i{
+    width: 50%;
+ }
+ .search i{
     font-size: 25px;
-}
-.cart i{
+ }
+ .cart i{
     font-size: 25px;
-}
-
- .body-cart img{
-    width: 15%;
-}
-.menu{
+ }
+ .menu{
     margin-bottom: 0;
     width:80% ;
     display: flex;
     margin-left: -80px;
     justify-content: space-around;
-}
-.menu  li {
+ }
+ .menu  li {
     margin: 0 10px;
     margin-bottom: 0;
-}
-.menu li a{
+ }
+ .menu li a{
     font-size: 20px;
-}
-.fa-bars{
+ }
+ .fa-bars{
     display: none;
-}
-.sticky{
+ }
+ .sticky{
     height: 80px;
     line-height: 80px;
     background-color: #000;
     /* background-color: #446084; */
     opacity: 0.8;
-}
-.sticky .logo a span {
+ }
+ .sticky .logo a span {
     color: #fff;
-}
-.sticky li a{
+ }
+ .sticky li a{
     color: #fff;
-}
-.sticky li .signOut{
+ }
+ 
+ .sticky .search i{
     color: #fff;
-}
-
-.sticky .search i{
+ }
+ .sticky .cart i{
     color: #fff;
-}
-.sticky .cart i{
+ }
+ .sticky .account{
     color: #fff;
-}
-.sticky .account{
-    color: #fff;
-}
-
-.sticky .account  li {
+ }
+ 
+ .sticky .account  li {
     background: #000;
     opacity: 0.8;
     /* transition: all 0.5s; */
     
-}
-
-.siteM li a{
-    animation: none;
-}
-
-.sticky ul li::before{
+ }
+ 
+ .sticky ul li::before{
     content: "";
     width: 100%;
     height: 2px;
@@ -194,7 +180,11 @@ nav{
     bottom: 20px;
     left: 0;
     transform: scale(0);
-}
+ }
+ 
+ .body-cart img {
+    width: 15%;
+ }
 @media only screen and (max-width:768px){
     .wrapper{
         /* max-width: 768px; */

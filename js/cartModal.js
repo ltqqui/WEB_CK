@@ -20,6 +20,9 @@
 var total=0
 var userSignIn=getLocalStorage("userSignIn")
 var profileList=getLocalStorage("profileList");
+if (userSignIn===undefined){
+    userSignIn={}
+}
 $(document).ready(function(){
     $('#cart').click(function(){
         $('.modal').modal('show')

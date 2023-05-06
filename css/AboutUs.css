@@ -49,6 +49,18 @@
     color: #121212;
     font-size: 13px;
 }
+
+.wrapper{
+
+    margin-top: 100px;
+    /* margin-left: 10px; */
+
+}
+
+.wrapper a{
+    text-decoration: none;
+}
+
 a{
     text-decoration: none;
     color: #000;
@@ -116,15 +128,12 @@ nav{
 .account{
     width: 10%;
     font-size: 20px;
-    
-    /* background-color: green; */
     color: #121212BF;
     border-radius: 3px;
     cursor: pointer;
 }
 .account  li {
     margin-left: -30px;
-    display: none;
     text-align: center;
     background: rgba(248, 248, 248, 0.807);
     
@@ -133,14 +142,16 @@ nav{
     border-radius: 0 0 4px 4px;
 }
 
-.account:hover{
-    /* background-color: green; */
-    transition: all 0.5s;
+.btn-account {
+    width: 90%;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    border: none;
 }
-.account:hover li{
-    transition: all 0.5s;
-    display: block; 
-       
+.account-list{
+    display: none;
 }
 .search-cart{
     width:20%;
@@ -174,6 +185,9 @@ nav{
 .menu li a{
     font-size: 20px;
 }
+.signOut{
+    font-size: 20px;
+}
 .sticky{
     height: 80px;
     line-height: 70px;
@@ -185,6 +199,9 @@ nav{
     color: #fff;
 }
 .sticky li a{
+    color: #fff ;
+}
+.sticky .signOut{
     color: #fff;
 }
 
@@ -216,16 +233,11 @@ nav{
     left: 0;
     transform: scale(0);
 }
-.wrapper{
 
-    margin-top: 100px;
-    /* margin-left: 10px; */
-
+.body-cart img {
+    width: 15%;
 }
 
-.wrapper a{
-    text-decoration: none;
-}
 .member{
     display: flex;
 }

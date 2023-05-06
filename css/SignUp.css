@@ -194,7 +194,12 @@ nav{
     transform: scale(0);
 }
 
-
+.profile{
+    display: none;
+}
+.signOut{
+    display: none;
+}
 
 /* form */
 

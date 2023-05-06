@@ -35,38 +35,63 @@
       <!-- <div class="welcome">
             <span>Welcome to our store </span>
         </div> -->
-      <header class="header">
-        <div class="logo">
-          <a href="../index.html">
-            <span>Q&T.vn</span>
-          </a>
-        </div>
-        <i class="fa-solid fa-bars"></i>
-        <nav>  
-          <ul class="menu ">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <div class="search-cart">
-            <div class="search">
-              <a href="#"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="cart">
-              <a href="#"><i class="fa fa-cart-shopping"></i></a>
-            </div>
+        <header class="header">
+          <div class="logo">
+            <a href="../index.html">
+              <span>Q&T.vn</span>
+            </a>
           </div>
-        </nav>
-        <div class="account">
+          <i class="fa-solid fa-bars"></i>
+          <nav>  
+            <ul class="menu ">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./AboutUS.html">About Us</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="search-cart">
+              <div class="search">
+                <a href="../html/Search.html"><i class="fa fa-search"></i></a>
+              </div>
+              <div class="cart">
+                <a href="#" id="cart"><i class="fa fa-cart-shopping"></i></a>
+              </div>
+            </div>
+          </nav>
+          <div class="account">
             <button class="btn-account">Account</button>
           <ul class="account-list">  
-            <li ><a href="./SignUp.html">Sign up</a></li>
-            <li> <a href="./SignIn.html">Sign in </a></li>
-            <li ><a href="#" class="signOut">Sign out</a></li>
+            <li ><a href="./SignUp.html"class="signUp">Sign up</a></li>
+            <li> <a href="./Profile.html" class="profile">Profile</a></li>
+            <li> <a href="./SignIn.html" class="signIn">Sign in </a></li>
+            <li ><button class="signOut btn">Sign out</button></li>
           </ul>
         </div>
-      </header>
-
+        </header>
+        <div class="modal fade" >
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content w-100">
+              <div class="modal-header w-100">
+                <h4 class="modal-title text-dark ">Your cart</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body w-100">
+                <table class="table">
+                  <thead>
+                    <th class="text-center">STT</th>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Image</th>
+                  </thead>
+                  <tbody class="body-cart">
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       <div class="form-signUp">
         <div class="form" id="form">
              <div class="form-header">
@@ -124,6 +149,6 @@
     <script  type="module" src="../js/signUp.js"></script>
     <script src="../js/userSignUp.js"></script>
     <script src="../js/validation.js"></script>
-    <!-- <script src="../js/product.js"></script> -->
+    <script src="../js/cartModal.js"></script>
   </body>
 </html>

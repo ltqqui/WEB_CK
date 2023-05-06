@@ -9,7 +9,7 @@
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none !important;
     color: #000;
 }
 ul li{
@@ -283,6 +283,18 @@ nav{
     transition: 0.25s ease-in-out;
 }
 
+
+@keyframes animatedAccount{
+    0%{
+        transform: scale(0,1);
+    }
+    50%{
+        transform: scale(1,1);
+    }
+    100%{
+        transform: scale(0,1);
+    }
+}
 
 @keyframes animatedSearch {
 0%{

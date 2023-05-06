@@ -19,8 +19,6 @@
 .menu-bar{
     margin-top: 100px;
     margin-left: -50px;
-    
-    
 }
 
 
@@ -396,4 +394,8 @@ footer .row .col-4 img{
        }
         
      }
+  }
+
+  .info{
+    /* position: absolute; */
   }

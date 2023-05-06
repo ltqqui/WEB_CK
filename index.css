@@ -9,7 +9,7 @@
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none !important; 
     color: #000;
 }
 ul li{
@@ -468,6 +468,8 @@ footer .row .col2 a{
 footer .row .col-4 img{
     width: 40%;
 }
+
+
 
 @media only screen and (max-width:768px){
     .wrapper{

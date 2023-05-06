@@ -253,7 +253,7 @@ nav{
     border: 1px solid #777;
     border-radius: 10px;
     overflow: hidden;
-
+    height: 450px;
 }
 .member .member-child .img img{
     width: 100%;
